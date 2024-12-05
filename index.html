@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Selection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+ 
+    h1, h3 {
+      text-align: center;
+    }
+ 
+    h1 {
+      font-family: 'Times New Roman', serif;
+      color: #333;
+      margin-bottom: 10px;
+    }
+ 
+    h3 {
+      font-family: 'Franklin Gothic Medium', sans-serif;
+      color: #410dfd;
+      margin-bottom: 20px;
+    }
+ 
+    .card {
+      background: linear-gradient(to bottom right, #2674ce, #2d0080);
+      border-radius: 12px;
+      color: white;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 20px;
+    }
+ 
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    }
+ 
+    .card img {
+      border-radius: 20%;
+      width: 150px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+ 
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+ 
+    .btn-secondary:hover {
+      background-color: #5a6268;
+      transform: scale(1.1);
+    }
+ 
+    .modal-header {
+      background-color: #21363d;
+      color: white;
+      border-bottom: none;
+    }
+ 
+    .modal-footer a {
+      background-color: #0d6efd;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+ 
+    .modal-footer a:hover {
+      background-color: #0056b3;
+    }
+    .center{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    .modal-footer {
+      border-top: none;
+      justify-content: center;
+    }
+  </style>
+</head>
+ 
+<body>
+  <h1>Character Selection</h1>
+  <h3>Astral Express List</h3>
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="stelle.png" class="center" alt="Trailblazer">
+          <p class="card-text">Trailblazer - Stelle</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal1" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="march.jfif" class="center" alt="">
+          <p class="card-text">March 7th</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal2" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="daheng.jpg" class="center" alt="">
+          <p class="card-text">Dan Teng</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal3" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="himeko.jfif" class="center" alt="">
+          <p class="card-text">Himeko</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal4" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="welt.jpg" class="center" alt="">
+          <p class="card-text">Welt</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal5" aria-label="More details">Select</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <h3>Cosmic</h3>
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="acheron.jpg" class="center" alt="">
+          <p class="card-text">Acheron</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal6" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="argenti.jpg" class="center" alt="">
+          <p class="card-text">Argenti</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal7" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="blackswan.jpg" class="center" alt="">
+          <p class="card-text">Black Swan</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal8" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="boothill.jpg" class="center" alt="">
+          <p class="card-text">Boothill</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal9" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="ratio.jpg" class="center" alt="">
+          <p class="card-text">Dr. Ratio</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal10" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="rappa.jpg" class="center" alt="">
+          <p class="card-text">Rappa</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal11" aria-label="More details">Select</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card position-relative">
+          <img src="sparkle.jpg" class="center" alt="">
+          <p class="card-text">Sparkle</p>
+          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal12" aria-label="More details">Select</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="stelle.png" alt="Trailblazer" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal1Label">Trailblazer/Stelle Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Trailblazer/Stelle.</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="march.jfif" alt="Guardian" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal2Label">March 7th Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected March 7th</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="daheng.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal3Label">Dan Teng Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Dan Teng</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="himeko.jfif" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal4Label">Himeko Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Himeko</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="welt.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal5Label">Welt Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Welt</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="acheron.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal6Label">Acheron Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Acheron</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="argenti.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal7Label">Argenti Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Argenti</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="blackswan.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal8Label">Black Swan Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Black Swan</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modal9Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="boothill.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal9Label">Boothill Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Boothill</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="modal10Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="ratio.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal10Label">Dr. Ratio Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Dr. Ratio</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal11" tabindex="-1" aria-labelledby="modal11Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="rappa.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal11Label">Rappa Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Rappa</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal12" tabindex="-1" aria-labelledby="modal12Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="sparkle.jpg" alt="" style="width: 60px; height: auto; border-radius: 20%;" class="me-3">
+          <h5 class="modal-title" id="modal12Label">Sparkle Selected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You have selected Sparkle</p>
+          <p>Click Continue to proceed!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="joingame.html" role="button">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+ 
+</html>
